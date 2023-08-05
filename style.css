@@ -1,0 +1,131 @@
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    position: relative;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(háttér.png);
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+.háttér {
+    width: 100%;
+    height: 100vh;
+    min-height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(háttér.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.nav {
+    color: #ffeefd;
+    width: 85%;
+    margin: auto;
+    padding: 1.5% 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.nav ul li a {
+    color: #ffeefd;
+    font-size: 20px;
+    text-decoration-line: none;
+}
+
+.nav ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #ee74ad;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s;
+}
+
+.nav ul li:hover::after {
+    width: 100%;
+}
+
+.nav ul li a.actual {
+    color: #b94bb2;
+    font-size: 30px;
+}
+
+.szöveg p {
+    size: 960px;
+    color: #fceefa;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-80%, -50%);
+    text-align: justify;
+    z-index: 1;
+}
+.videó {
+    top: 50%;
+    left: 50%;
+    transform: translate(50%, -50%);
+    z-index: 1;
+    position: absolute;
+}
+
+
+.container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 40px 20px 0px 20px;
+        top: 50%;
+        left: 50%;
+        transform: translate(0%, -65%);
+}
+.container .box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.container .box .dream {
+    display: flex;
+    flex-direction: column;
+    width: 32.5%;
+    
+}
+.container .box .dream img{
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 750px) {
+    .container {
+        top: 250%;
+        left: 50%;
+        transform: translate(0%, -19%);
+}
+    .container .box {
+        flex-direction: column;
+}
+    .container .box .dream {
+        width: 100%;
+}
+}
